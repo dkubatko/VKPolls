@@ -8,8 +8,8 @@ def start_app(w, h,  rgb, f_s, link, b_rgb, b_thick):
     print "Loading..."
     warnings.filterwarnings("ignore")
 
-    session = vk.AuthSession(app_id = '5813182', user_login = '89296301367',
-                         user_password = 'danjusha', scope = "wall")
+    session = vk.AuthSession(app_id = 'XXXXXXX', user_login = 'XXXXXXXX',
+                         user_password = 'XXXXXXXX', scope = "wall")
     api = vk.API(session)
     link = str(link.split('/')[-1][4:])
     info = {}
