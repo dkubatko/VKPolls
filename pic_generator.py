@@ -45,7 +45,7 @@ def new_img(data, wid, pix_raw, color, f_size, b_rgb, b_thick):
     
    for i in range(2, 2*count + 1, 2):
 
-      font = ImageFont.truetype("C://Test/text/open.ttf", f_size)
+      font = ImageFont.truetype("open.ttf", f_size)
       text = data["answers"][(i - 1) / 2]['text'] + " - " + str(data["answers"][(i - 1) / 2]["rate"]) + "%"
 
       l1 = width / draw.textsize('a', font = font)[0]
