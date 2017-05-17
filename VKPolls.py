@@ -27,11 +27,12 @@ def to_list(s):
 
 app = Tk()
 app.title("VKPolls")
-app.geometry("338x270")
+app.geometry("430x270")
 Label(app, text="Enter the post link: ").grid(row = 0, column = 0, columnspan = 2, padx = (0, 49))
 
-link = Entry(app, width = 40)
+link = Entry(app, width = 40, justify='center')
 link.grid(row = 1, column = 0, columnspan = 2, padx = (0, 49), pady = (0, 10))
+link.insert(END, "https://vk.com/wall-39130902_1562384")
 
 Label(app, text="Width:").grid(row=2, column = 0)
 Label(app, text="Height (per row):").grid(row=2, column = 1)
@@ -72,7 +73,7 @@ def press():
       a1, a2, a3, a4, a5, a6, a7 = int(w.get()), int(h.get()), to_list(rgb.get()), int(font.get()),link.get(), to_list(b_rgb.get()), int(b_thick.get())
 
       if (link.get() == ''):
-         raise ValueError('Badbadbad')
+         raise ValueError('Value in the field <link> is wrong')
       
       app.destroy()
 
@@ -90,9 +91,6 @@ def press():
       
    
    
-   
-
-
 b = Button(app, text = "Submit", command = press, width = 10)
 b.grid(row=8, columnspan = 2, padx = (0, 50), pady = (30, 0))
 
